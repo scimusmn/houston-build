@@ -18,6 +18,12 @@ else
   cd ~/Desktop/ && { git clone https://github.com/scimusmn/houston-lab.git ~/Desktop/source; cd - ; }
 fi
 
+if [-ne ~/Desktop/source/config/settings.json]
+then
+  echo "Setup default config file for Meteor source"
+  cp ~/Desktop/source/config/settings.default.json ~/Desktop/source/config/settings.json
+fi
+
 #
 # Click script
 # We use this to ensure that Stele has full focus to prevent the menu bar
