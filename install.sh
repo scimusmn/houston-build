@@ -12,6 +12,8 @@ echo "--------------------------------------------------------------------------
 if [ ! -e ~/.meteor/ ]
 then
   curl https://install.meteor.com/ | sh
+else
+  echo "Meteor is already installed"
 fi
 
 echo
