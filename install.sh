@@ -40,6 +40,8 @@ if [ ! -e ~/Desktop/stele/cfg/browser.cfg ]
 then
   echo "Setup default config file for Stele"
   cp ~/Desktop/stele/cfg/browser.cfg.default ~/Desktop/stele/cfg/browser.cfg
+else
+  echo "Stele is already configured"
 fi
 
 #
