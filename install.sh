@@ -12,7 +12,7 @@ echo "--------------------------------------------------------------------------
 if [ -e ~/Desktop/source ]
 then
   echo "There's already a source file at ~/Desktop/source."
-  cd ~/Desktop && { git pull origin master; }
+  cd ~/Desktop/source && { git pull origin master; }
 else
   echo "Downloading source"
   cd ~/Desktop/ && { git clone https://github.com/scimusmn/houston-lab.git ~/Desktop/source; cd - ; }
