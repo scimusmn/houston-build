@@ -12,8 +12,7 @@ echo "--------------------------------------------------------------------------
 if [ -e ~/Desktop/source ]
 then
   echo "There's already a source file at ~/Desktop/source."
-  echo "So, I'm going to skip this step."
-  echo "You'll need to mannually check and see if your local source is up to date and correct."
+  cd ~/Desktop && { git pull origin master; }
 else
   echo "Downloading source"
   cd ~/Desktop/ && { git clone https://github.com/scimusmn/houston-lab.git ~/Desktop/source; cd - ; }
