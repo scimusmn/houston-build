@@ -24,6 +24,24 @@ then
   cp ~/Desktop/source/config/settings.default.json ~/Desktop/source/config/settings.json
 fi
 
+echo "--------------------------------------------------------------------------------"
+echo "Setup Stele"
+echo "--------------------------------------------------------------------------------"
+if [ -e ~/Desktop/stele ]
+then
+  echo "Stele is already installed. Just going to check that it's up to date."
+  cd ~/Desktop/stele && { git pull origin master; }
+else
+  echo "Downloading Stele"
+  cd ~/Desktop/ && { git clone https://github.com/scimusmn/stele.git ~/Desktop/stele; cd - ; }
+fi
+
+if [ ! -e ~/Desktop/stele/cfg/browser.cfg ]
+then
+  echo "Setup default config file for Stele"
+  cp ~/Desktop/stele/cfg/browser.cfg.default ~/Desktop/stele/cfg/browser.cfg
+fi
+
 #
 # Click script
 # We use this to ensure that Stele has full focus to prevent the menu bar
