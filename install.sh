@@ -59,3 +59,14 @@ echo "--------------------------------------------------------------------------
 # Install LaunchAgents to start everything up when the computer boots
 echo "Install LaunchAgents."
 cp $DIR/assets/launchd/* ~/Library/LaunchAgents/
+
+echo
+echo "--------------------------------------------------------------------------------"
+echo "Manual steps"
+echo "--------------------------------------------------------------------------------"
+echo "You have to do two things manually to finalize the setup"
+echo "Google Analytics setup - Manually add your GA project ID with:"
+echo " - vi ~/Desktop/source/config/settings.json"
+echo "Stele setup - Manually set the home URL"
+echo " - vi ~/Desktop/stele/cfg/browser.cfg"
+
