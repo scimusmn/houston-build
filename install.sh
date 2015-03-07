@@ -60,6 +60,18 @@ fi
 # We use this to ensure that Stele has full focus to prevent the menu bar
 # and the dock from showing.
 #
+# Check for cliclick, our clicking utility
+# Install if not present
+if which cliclick ; then
+  echo "cliclick is present"
+else
+  echo "Installing cliclick"
+  brew install cliclick
+fi
+
+#
+# Move the click script to the desktop
+#
 cp $DIR/assets/click.command ~/Desktop/
 chmod +x ~/Desktop/click.command
 
