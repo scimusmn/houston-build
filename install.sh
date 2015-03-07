@@ -63,8 +63,7 @@ fi
 
 # Set Chrome's presentation mode to 3, which blocks the dock and Apple menu bar
 echo "Modifying Chrome to truely go fullscreen"
-perl -i.bak -0pe 's/(NSAppleScriptEnabled.*\n(.*)<true\/>\n)/$1$2<key>LSUIPresentationMode<\/key>\n$2<integer>3<\/integer>\n/g;' /Applications/Google\ Chrome.app/Contents/Info.plist
-
+perl -i.bak -0pe 's/(NSAppleScriptEnabled.*\n(.*)<true\/>\n)(.*<key>NSPrincipalClass)/$1$2<key>LSUIPresentationMode<\/key>\n$2<integer>3<\/integer>\n$3/g;' /Applications/Google\ Chrome.app/Contents/Info.plist
 # Ensure that Stele has focus after launching with a sleep and click script
 
 # Check for cliclick, our clicking utility
