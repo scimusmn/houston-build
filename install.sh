@@ -56,10 +56,16 @@ else
 fi
 
 #
-# Click script
-# We use this to ensure that Stele has full focus to prevent the menu bar
-# and the dock from showing.
+# True fullscreen
 #
+# To get true fullscreen we need to modify Chrome and ensure that the
+# kiosked Chrome window (run by Stele) has focus once it is launched.
+
+# Set Chrome's presentation mode to 3, which blocks the dock and Apple menu bar
+perl -i.bak -0pe 's/(NSAppleScriptEnabled.*\n(.*)<true\/>\n)/$1$2<key>LSUIPresentationMode<\/key>\n$2<integer>3<\/integer>\n/g;' /Applications/Google\ Chrome.app/Contents/Info.plist
+
+# Ensure that Stele has focus after launching with a sleep and click script
+
 # Check for cliclick, our clicking utility
 # Install if not present
 if which cliclick ; then
@@ -69,9 +75,7 @@ else
   brew install cliclick
 fi
 
-#
-# Move the click script to the desktop
-#
+# Move the sleep and click script to the desktop
 cp $DIR/assets/click.command ~/Desktop/
 chmod +x ~/Desktop/click.command
 
