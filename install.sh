@@ -35,6 +35,7 @@ then
   cp ~/Desktop/source/config/settings.default.json ~/Desktop/source/config/settings.json
 fi
 
+echo
 echo "--------------------------------------------------------------------------------"
 echo "Setup Stele"
 echo "--------------------------------------------------------------------------------"
