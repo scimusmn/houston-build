@@ -96,12 +96,16 @@ echo "Manual steps"
 echo "--------------------------------------------------------------------------------"
 echo "You have to do a few things manually to finalize the setup"
 echo
-echo "Google Analytics setup - Manually add your GA project ID with:"
-echo " - vi ~/Desktop/source/config/settings.json"
+echo "1. Google Analytics setup"
+echo "Manually add your GA project ID with:"
 echo
-echo "Stele setup - Manually set the home URL"
-echo "vi ~/Desktop/stele/cfg/browser.cfg"
+echo "vi ~/Desktop/source/config/settings.json"
+echo
+echo "2. Stele setup"
+echo "Manually set the home URL"
+echo
 echo "vi ~/Desktop/stele/cfg/browser.cfg"
 echo
+echo "3. Click on startup"
 echo "Add click.command to the start applications"
 
