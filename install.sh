@@ -106,6 +106,6 @@ echo "Manually set the home URL"
 echo
 echo "vi ~/Desktop/stele/cfg/browser.cfg"
 echo
-echo "3. Click on startup"
+echo "3. Run click on startup"
 echo "Add click.command to the start applications"
 
